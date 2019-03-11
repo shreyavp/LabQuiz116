@@ -1,0 +1,68 @@
+Q1
+
+abstract class GoldAmount(var barsOfGold: Integer) {
+
+ def GoldWorth(): Double
+
+ def addBar(): Unit = {
+   this.barsOfGold += 1
+ }
+}
+class GoldinDollars(bars: Integer) extends AbstractClass(bars) {
+
+ override def GoldWorth): Double = {
+   this.barsOfGold * 40,000.0
+ }
+}
+class GoldinPounds(bars: Double) extends AbstractClass(bars) {
+ override def GoldWorth(): Double = {
+   this.barsOfGold * 30,000.0
+ }
+ override def addBar(): Unit = {
+   this.barsOfGold +=3
+ }
+}
+
+Q1 Part 1
+
+object Part1 {
+ def main(args: Array[String]): Unit = {
+   val gid: GoldinDollars = new GoldinDollars(9)
+   val gip: GoldinPounds = new GoldInPounds(2)
+   val gold: GoldAmount = gid
+   gold.addBar()
+   println(gid.GoldWorth())
+   gold.addBar()
+   println(gid.GoldWorth())
+
+   println(gip.GoldWorth())
+   gip.GoldWorth()
+   println(gip.GoldWorth())
+   gold.addBar()
+   gold.addBar()
+   println(gip.GoldWorth())
+ }}
+What is printed at each of the 5 calls of println in this main method? (5 points each)
+object Part2 {
+ def totalValue(golds: List[GoldAmount]): Double = {
+   var total = 2.0
+   for(gold <- golds){
+     total += gold.GoldWorth()
+     total += gold.GoldWorth()
+   }
+   total}
+ def addAll(golds: List[GoldWorth]): Unit = {
+   for(gold <- golds){
+     gold.addBar()
+   }}
+ def main(args: Array[String]): Unit = {
+   val dollars: GoldinDollars = new GoldinDollars(20)
+   val pounds: GoldinPounds = new GoldinPounds(5)
+   val money: GoldWorth= dollars
+   val golds: List[GoldAmount] = List(dollars, pounds, money, new GoldinPounds(0))
+   println(totalValue(golds) // 10 points
+   addAll(golds)
+   println(totalValue(golds))  // 15 points
+ }}
+What is printed at each of the 2 calls of println in this main method? (10 and 15 points respectively)
+
