@@ -58,7 +58,7 @@ object Part2 {
  def main(args: Array[String]): Unit = {
    val dollars: GoldinDollars = new GoldinDollars(20)
    val pounds: GoldinPounds = new GoldinPounds(5)
-   val money: GoldWorth= dollars
+   val money: GoldAmount= dollars
    val golds: List[GoldAmount] = List(dollars, pounds, money, new GoldinPounds(0))
    println(totalValue(golds) // 10 points
    addAll(golds)
