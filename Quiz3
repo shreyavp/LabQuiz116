@@ -132,37 +132,3 @@ Question: What happens when the printline above is executed
  }
 
 
-Object q4{
-def main(args: Array[String]): Unit = {
-
-def q4(): Int = {
- var myList: LinkedListNode[studentProfile] = new LinkedListNode[studentProfile](
-   new studentProfile(compling, 45), null
-
- )
- myList = myList.prepend(new studentProfile(“Ops”, 88))
- myList = myList.prepend(new studentProfile(“comp”, 89))
- myList = myList.prepend(new studentProfile(“Algos”, 99))
- myList = myList.prepend(new studentProfile(“DS”, 96))
- myList = myList.prepend(new studentProfile(“PL”, 97))
-
-
- val f: studentProfile => Unit = (x: studentProfile) => x.points+=2
- myList.foreach(f)
-
- val g: studentProfile=> <type> = (i:studentProfile) => {
-if(i.points < 100){
-          i.points + 5
-        }
-        else{
-          i.points + 2
-        }
-      }
-      myList.profileCreate(g)
-    }
-    print(q4())
-  }
-}
-
-    
-Question: What happens when the printline above is executed
