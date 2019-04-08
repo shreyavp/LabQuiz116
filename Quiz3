@@ -47,7 +47,7 @@ What is returned by the method call f(11)?
 Q3 (25 points): Study the following code to answer the question below
 
 def f(n: Int): Int = {
- if (n==0) {
+ if (n<=1) {
    1
  } else {
        1/n + f(n-1) + f(n/2)
