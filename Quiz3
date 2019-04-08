@@ -47,15 +47,22 @@ What is returned by the method call f(11)?
 Q3 (25 points): Study the following code to answer the question below
 
 def f(n: Int): Int = {
- if (n<=0) {
+ if (n==0) {
    1
  } else {
-     n*f(n+2)/2
+       1/n + f(n-1) + f(n/2)
+
  }
+
 }
+print(f(3))
 
 
-What is returned by the method call f(3)?
+What is printed to the screen by the above print statement?
+
+
+
+
 
 
  
@@ -134,11 +141,12 @@ def q4(): Int = {
  )
  myList = myList.prepend(new studentProfile(“Ops”, 88))
  myList = myList.prepend(new studentProfile(“comp”, 89))
- myList = myList.prepend(new studentProfile(“Algos”, 99)) myList = myList.prepend(new studentProfile(“DS”, 96))
+ myList = myList.prepend(new studentProfile(“Algos”, 99))
+ myList = myList.prepend(new studentProfile(“DS”, 96))
  myList = myList.prepend(new studentProfile(“PL”, 97))
 
 
- val f: studentProfile => Unit = (x: studentProfile) => <x.points+=2
+ val f: studentProfile => Unit = (x: studentProfile) => x.points+=2
  myList.foreach(f)
 
  val g: studentProfile=> <type> = (i:studentProfile) => {
