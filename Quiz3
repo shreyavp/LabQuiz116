@@ -97,7 +97,8 @@ def q4(): Int = {
  )
  myList = myList.prepend(new studentProfile(“Ops”, 88))
  myList = myList.prepend(new studentProfile(“comp”, 89))
- myList = myList.prepend(new studentProfile(“Algos”, 99)) myList = myList.prepend(new studentProfile(“DS”, 96))
+ myList = myList.prepend(new studentProfile(“Algos”, 99)) 
+ myList = myList.prepend(new studentProfile(“DS”, 96))
  myList = myList.prepend(new studentProfile(“PL”, 97))
 
 
