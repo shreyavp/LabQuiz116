@@ -101,7 +101,7 @@ def q4(): Int = {
  myList = myList.prepend(new studentProfile(“PL”, 97))
 
 
- val f: studentProfile => Unit = (x: studentProfile) => <x.points+=2
+ val f: studentProfile => Unit = (x: studentProfile) => x.points+=2
  myList.foreach(f)
 
  val g: studentProfile=> <type> = (i:studentProfile) => {
