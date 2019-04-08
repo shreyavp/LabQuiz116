@@ -1,0 +1,159 @@
+Q1 (25 points): Study the following code to answer the question below
+
+class studentProfile(var name: <String>, var points: <Int>) {}
+
+
+def q1(): Unit = {
+ var aList = List(
+   new studentProfile(“Ops”, 88),
+   new studentProfile(“comp”, 89),
+   new studentProfile(“Algos”, 99),
+   new studentProfile(“DS”, 96),
+   new studentProfile(“PL”, 97)
+ )
+
+ val comparator: (studentProfile, studentProfile) => Boolean =
+   (a: studentProfile, b: studentProfile) => 
+    (a.name.length()-a.points ) > (b.name.length() -b.points)
+ aList = aList.sortWith(comparator)
+
+for(a <- aList){
+println(a.name)
+}
+
+}
+
+In what order are the elements of the inventory list printed at the end of the q1() method call?
+
+
+
+Q2 (25 points): Study the following code to answer the question below
+
+def f(n: Int): Int = {
+ if (n>12) {
+   10
+ } else {
+10 + f(n+3)   
+ }
+
+}
+
+
+What is returned by the method call f(11)?
+
+
+
+
+Q3 (25 points): Study the following code to answer the question below
+
+def f(n: Int): Int = {
+ if (n<=0) {
+   1
+ } else {
+     n*f(n+2)/2
+ }
+}
+
+
+What is returned by the method call f(3)?
+
+
+ 
+
+class studentProfile(var name: <String>, var points: <Int>){}
+
+class LinkedListNode[A](var value: A, var next: LinkedListNode[A]) {
+ def profileCreate(f: A => Int): Int = {
+
+   if (this.next == null) {
+     f(this.value)
+   }else{
+     f(this.value) + this.next.profileCreate(f)
+   }
+
+def prepend(a: A): LinkedListNode[A] = {
+   new LinkedListNode[A](a, this)
+ }
+
+ def map[B](f: A => B): LinkedListNode[B] = {
+   val newValue = f(this.value)
+   if (this.next == null) {
+     new LinkedListNode[B](newValue, null)
+   } else {
+     new LinkedListNode[B](newValue, this.next.map(f))
+   }def main(args: Array[String]): Unit = {
+
+def q4(): Int = {
+ var myList: LinkedListNode[studentProfile] = new LinkedListNode[studentProfile](
+   new studentProfile(compling, 45), null
+
+ )
+ myList = myList.prepend(new studentProfile(“Ops”, 88))
+ myList = myList.prepend(new studentProfile(“comp”, 89))
+ myList = myList.prepend(new studentProfile(“Algos”, 99)) myList = myList.prepend(new studentProfile(“DS”, 96))
+ myList = myList.prepend(new studentProfile(“PL”, 97))
+
+
+ val f: studentProfile => Unit = (x: studentProfile) => <x.points+=2
+ myList.foreach(f)
+
+ val g: studentProfile=> <type> = (i:studentProfile) => {
+if(i.points < 100){
+          i.points + 5
+        }
+        else{
+          i.points + 2
+        }
+      }
+      myList.profileCreate(g)
+    }
+    print(q4())
+  }
+}
+
+    
+Question: What happens when the printline above is executed
+
+ }
+
+ def foreach(f: A => Unit): Unit = {
+   f(this.value)
+   if (this.next != null) {
+     this.next.foreach(f)
+   }
+ }
+
+
+Object q4{
+def main(args: Array[String]): Unit = {
+
+def q4(): Int = {
+ var myList: LinkedListNode[studentProfile] = new LinkedListNode[studentProfile](
+   new studentProfile(compling, 45), null
+
+ )
+ myList = myList.prepend(new studentProfile(“Ops”, 88))
+ myList = myList.prepend(new studentProfile(“comp”, 89))
+ myList = myList.prepend(new studentProfile(“Algos”, 99)) myList = myList.prepend(new studentProfile(“DS”, 96))
+ myList = myList.prepend(new studentProfile(“PL”, 97))
+
+
+ val f: studentProfile => Unit = (x: studentProfile) => <x.points+=2
+ myList.foreach(f)
+
+ val g: studentProfile=> <type> = (i:studentProfile) => {
+if(i.points < 100){
+          i.points + 5
+        }
+        else{
+          i.points + 2
+        }
+      }
+      myList.profileCreate(g)
+    }
+    print(q4())
+  }
+}
+
+    
+Question: What happens when the printline above is executed
